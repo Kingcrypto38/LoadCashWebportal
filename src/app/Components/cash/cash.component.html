@@ -1,1 +1,90 @@
-<p>cash works!</p>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-12">
+                <h3>Cash Component</h3>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row p-2">
+            <label for="" class="col-3 align-middle"><strong> 2000 </strong></label>
+            <label for="" class="col-1 text-center align-middle"><strong>X</strong></label>
+            <div class="col-3">
+                <input [(ngModel)]="this.notes2000" class="form-control" type="number">
+            </div>
+            <label for="" class="col-1 text-center align-middle"><strong>=</strong></label>
+            <div class="col-4">
+                <input [value]="this.value2000" disabled class="form-control">
+            </div>
+        </div>
+        <div class="row p-2">
+            <label for="" class="col-3 align-middle"><strong> 500 </strong></label>
+            <label for="" class="col-1 text-center align-middle"><strong>X</strong></label>
+            <div class="col-3">
+                <input [(ngModel)]="this.notes500" class="form-control" type="number">
+            </div>
+            <label for="" class="col-1 text-center align-middle"><strong>=</strong></label>
+            <div class="col-4">
+                <input [value]="this.value500" disabled class="form-control">
+            </div>
+        </div>
+        <div class="row p-2">
+            <label for="" class="col-3 align-middle"><strong> 200 </strong></label>
+            <label for="" class="col-1 text-center align-middle"><strong>X</strong></label>
+            <div class="col-3">
+                <input [(ngModel)]="this.notes200" class="form-control" type="number">
+            </div>
+            <label for="" class="col-1 text-center align-middle"><strong>=</strong></label>
+            <div class="col-4">
+                <input [value]="this.value200" disabled class="form-control">
+            </div>
+        </div>
+        <div class="row p-2">
+            <label for="" class="col-3 align-middle"><strong> 100 </strong></label>
+            <label for="" class="col-1 text-center align-middle"><strong>X</strong></label>
+            <div class="col-3">
+                <input [(ngModel)]="this.notes100" class="form-control" type="number">
+            </div>
+            <label for="" class="col-1 text-center align-middle"><strong>=</strong></label>
+            <div class="col-4">
+                <input [value]="this.value100" disabled class="form-control">
+            </div>
+        </div>
+        <div class="row p-2">
+            <label for="" class="col-3 align-middle"><strong> 50 </strong></label>
+            <label for="" class="col-1 text-center align-middle"><strong>X</strong></label>
+            <div class="col-3">
+                <input [(ngModel)]="this.notes50" class="form-control" type="number">
+            </div>
+            <label for="" class="col-1 text-center align-middle"><strong>=</strong></label>
+            <div class="col-4">
+                <input [value]="this.value50" disabled class="form-control">
+            </div>
+        </div>
+        <div class="row p-2">
+            <label for="" class="col-3 align-middle"><strong> 10 </strong></label>
+            <label for="" class="col-1 text-center align-middle"><strong>X</strong></label>
+            <div class="col-3">
+                <input [(ngModel)]="this.notes10" class="form-control" type="number">
+            </div>
+            <label for="" class="col-1 text-center align-middle"><strong>=</strong></label>
+            <div class="col-4">
+                <input [value]="this.value10" disabled class="form-control">
+            </div>
+        </div>
+        <div class="row p-2">
+            <label for="" class="col-4 align-middle"><strong>Total</strong></label>
+            <div class="col-3">
+                <input [(ngModel)]="this.totalNotes" disabled class="form-control" type="number">
+            </div>
+            <label for="" class="col-1 text-center align-middle"><strong>=</strong></label>
+            <div class="col-4">
+                <input [value]="this.totalValue" disabled class="form-control" >
+            </div>
+        </div>
+        <div class="row p-2">
+            <button class="btn btn-primary btn-block"> Submit</button>
+        </div>
+    </div>
+</div>
