@@ -1,1 +1,45 @@
-<p>outstanding-balance works!</p>
+<div class="row justify-content-end">
+    <label for="staticEmail2" class="col-3 text-end pt-1">Filter</label>
+    <input type="text" class=" col-3 form-control me-3 mb-2" [(ngModel)]="filterText" style="width: auto;" placeholder="Filter Text">
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of filteredData | 
+                    paginate: { id: 'foo',
+                    itemsPerPage: pageSize,
+                    currentPage: page,
+                    totalItems: total }">
+
+                    <td>{{data.row}}</td>
+                    <td>{{data.type}}</td>
+                    <td>{{data.link}}</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row justify-content-between">
+    <div class="col-4">
+        <pagination-controls id="foo" [directionLinks]="true" (pageChange)="page = $event" [responsive]="true" previousLabel="" nextLabel=""></pagination-controls>
+    </div>
+    <div class="col-2">
+        <strong>Items per Page:   </strong>
+        <select (change)="handlePageSizeChange($event)">
+      <option *ngFor="let size of pageSizes" [ngValue]="size">
+        {{ size }}
+      </option>
+    </select>
+    </div>
+</div>

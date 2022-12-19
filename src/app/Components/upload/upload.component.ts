@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToggleService } from 'src/app/Services/toggle.service';
 
 @Component({
   selector: 'app-upload',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadComponent implements OnInit {
 
-  constructor() { }
+  constructor(public toggleServices: ToggleService) { }
 
   ngOnInit(): void {
   }
 
+  onAdisSubmit(){
+    this.toggleServices.isModalOpen = true
+  }
 }

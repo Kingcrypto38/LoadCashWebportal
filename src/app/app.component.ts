@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ToggleService } from './Services/toggle.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cash-load-webportal';
+  constructor(public toggleServices: ToggleService){}
+
 }

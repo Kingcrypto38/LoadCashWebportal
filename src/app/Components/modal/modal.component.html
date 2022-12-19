@@ -1,1 +1,26 @@
-<p>modal works!</p>
+<!-- Vertically centered modal -->
+<div class="modal fade" [ngClass]="{'show': this.toggleServices.isModalOpen}" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" [ngStyle]="{'display': this.toggleServices.isModalOpen ? 'block': 'none'}" aria-modal="true"
+    role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                <button type="button" (click)="onCloseModal()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div *ngIf="this.toggleServices.isCashResponse; else elseBlock" class="modal-body">
+                <p> <strong>Total Notes: </strong>{{this.cashServices.cashData.totalNotes}}</p>
+                <p> <strong>Total Amount: </strong>{{this.cashServices.cashData.totalValue}}</p>
+            </div>
+            <ng-template #elseBlock>
+                <div class="modal-body">
+                    <p> <strong>Upload was successful!!</strong></p>
+                </div>
+            </ng-template>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onCloseModal()">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="this.toggleServices.isModalOpen" class="modal-backdrop fade show"></div>

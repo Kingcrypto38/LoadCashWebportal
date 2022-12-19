@@ -1,0 +1,41 @@
+.main-nav{
+    background-color: #93da29 !important;
+}
+
+
+
+.brand-name{
+    margin-left: 20px;
+    font-weight: bold;
+}
+ul{
+    margin-right: 20px;
+}
+
+ul>li{
+    
+    font-weight: 500;
+}
+
+a{
+    color:#121010
+}
+
+@media only screen and (max-width: 654px) {
+    ul{
+        margin-top: 20px;
+        
+    }
+    a{
+    color:#ded3d3
+}
+
+    .collapsed-nav{
+    background-color: #121010;
+
+    }
+    ul>li{
+    margin-left: 20px;
+    border-bottom: 1px solid #93da29;
+    }
+}

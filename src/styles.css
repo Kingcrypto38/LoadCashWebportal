@@ -3,3 +3,25 @@
     margin: auto;
     padding: 2%;
 }
+
+.spinner-border{
+    color: #9acd32 !important;
+    width: 4rem;
+    height: 4rem;
+}
+
+.spinner-wrapper{
+    position: absolute;
+    left:50%;
+    top:50%;
+}
+
+.ngx-pagination{
+    padding-left: 0px !important;
+}
+
+@media only screen and (max-width: 654px) {
+    .submit-button{
+        width: 100%;
+    }
+}

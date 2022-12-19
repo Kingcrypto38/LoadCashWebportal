@@ -1,26 +1,26 @@
 <div class="card">
-    <div class="card-header">
-
-    </div>
     <div class="card-body">
         <div class="row">
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-body">
+            <div class="col-6 upload-card-wrapper">
+                <div class="card upload-card">
+                    <div class="card-body text-center ">
                         <h4>Upload Adis</h4>
-                        <input type="file" name="" id="">
-                        <button class=" d-flex btn btn-primary justify-content-center">Upload Adis</button>
+                        <form action="" method="post">
+                            <input class="form-control my-5" id="formFile" type="file" name="" id="">
+                                <input class="submit-button btn btn-primary m-auto" (click)="onAdisSubmit()" type="submit" value="Upload Adis">
+                         
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile04">
-                        <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-                    </div>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">Button</button>
+            <div class="col-6 upload-card-wrapper">
+                <div class="card upload-card">
+                    <div class="card-body text-center">
+                        <h4>Upload Spay</h4>
+                        <form action="" method="post">
+                            <input class="form-control my-5" id="formFile" type="file" name="" id="">
+                            <input class="submit-button btn btn-primary m-auto" type="submit" value="Upload Spay">
+                        </form>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CashService } from 'src/app/Services/cash.service';
+import { ToggleService } from 'src/app/Services/toggle.service';
 
 
 @Component({
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CashComponent implements OnInit {
 
-  constructor() { }
+  constructor(public toggleServices: ToggleService, private cashServices: CashService) { }
 
   ngOnInit(): void {
   }
@@ -37,6 +39,12 @@ export class CashComponent implements OnInit {
     this.value10 = Number(this.notes10) * 10
     this.totalNotes = Number(this.notes2000 + this.notes500 + this.notes200 + this.notes100 + this.notes50 + this.notes10)
     this.totalValue = Number(this.value2000 + this.value500 +this.value200 + this.value100 + this.value50 + this.value10)
+  }
+
+  onCashSubmit(){
+    this.toggleServices.isModalOpen = true
+    this.cashServices.cashData.totalNotes = this.totalNotes;
+    this.cashServices.cashData.totalValue = this.totalValue;
   }
   
 }

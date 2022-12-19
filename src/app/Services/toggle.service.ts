@@ -6,6 +6,10 @@ import { Injectable } from '@angular/core';
 export class ToggleService {
 
   constructor() { }
-
+  
+  isModalOpen = false
+  isCashResponse = false
+  isUploadResponse = false
+  isLoading = false
   showNav = false
 }
